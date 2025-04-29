@@ -1,0 +1,254 @@
+/* components/Layout/AppLayout/AppLayout.module.css */
+.appLayout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.headerContent {
+  flex: 1;
+}
+
+.contentWrapper {
+  display: flex;
+  flex: 1;
+  width: 100%;
+}
+
+.sidebar {
+  position: relative;
+  height: 100vh;
+  width: 250px;
+  background-color: black;
+  color: white;
+  transform: translateX(0);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: width 0.2s ease, transform 0.2s ease;
+  z-index: 100;
+  padding-top: 55px;
+}
+
+.sidebarContent {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 1rem;
+}
+
+/* .sidebarToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0;
+  color: #666;
+  transition: background-color 0.2s;
+} */
+
+.sidebarToggle:hover {
+  background-color: #e0e0e0;
+}
+
+.mobileToggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.hamburger {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #333;
+  position: relative;
+}
+
+.hamburger:before,
+.hamburger:after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #333;
+  position: absolute;
+  left: 0;
+}
+
+.hamburger:before {
+  top: -6px;
+}
+
+.hamburger:after {
+  bottom: -6px;
+}
+
+.sidebarLeft .sidebar {
+  width: 250px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.sidebarRight .sidebar {
+  width: 250px;
+  order: 2;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.withSidebar.sidebarLeft:not(.sidebarCollapsed) .main-content {
+  margin-left: 250px;
+}
+
+.withSidebar.sidebarRight:not(.sidebarCollapsed) .main-content {
+  margin-right: 250px;
+}
+
+.sidebarCollapsed .sidebarContent {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.sidebarCollapsed.sidebarLeft .main-content {
+  margin-left: 50px;
+}
+
+.sidebarCollapsed.sidebarRight .main-content {
+  margin-right: 50px;
+}
+
+.footer {
+  width: 100%;
+  background-color: #f8f9fa;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 0;
+}
+
+.hideHeaderOnScroll .header {
+  transition: transform 0.2s ease;
+}
+
+.scrollingDown.hideHeaderOnScroll .header {
+  transform: translateY(-100%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebarLeft .sidebar,
+  .sidebarRight .sidebar {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    width: 250px;
+    z-index: 1100;
+  }
+
+  .sidebarLeft .sidebar {
+    left: 0;
+    transform: translateX(-100%);
+  }
+
+  .sidebarRight .sidebar {
+    right: 0;
+    transform: translateX(100%);
+  }
+
+  .sidebarOpen.sidebarLeft .sidebar {
+    transform: translateX(0);
+    transition: width 0.2s ease, transform 0.2s ease;
+  }
+
+  .sidebarOpen.sidebarRight .sidebar {
+    transform: translateX(0);
+    transition: width 0.2s ease, transform 0.2s ease;
+  }
+
+  .withSidebar.sidebarLeft .main-content,
+  .withSidebar.sidebarRight .main-content,
+  .sidebarCollapsed.sidebarLeft .main-content,
+  .sidebarCollapsed.sidebarRight .main-content {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .mobileToggle {
+    display: block;
+  }
+
+  .sidebarToggle {
+    display: none;
+  }
+
+  /* Overlay when sidebar is open on mobile */
+  .sidebarOpen:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+  }
+}
+
+.sidebarCollapsed .sidebar {
+  width: 47px;
+}
+
+.sidebarCollapsed .sidebarToggle {
+  left: 47px;
+}
+
+.sidebarToggle {
+  position: absolute;
+  top: 2%;
+  padding-top: 55px;
+  transform: translateY(-50%);
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  width: 24px;
+  height: 40px;
+  cursor: pointer;
+  transition: width 0.2s ease, transform 0.2s ease;
+}
+
+.contentWrapper {
+  display: flex;
+  flex: 1;
+}
+
+.openedArrow,
+.closedArrow {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* .mainContent {
+  flex: 1;
+  transition: margin-left 0.3s ease;
+} */
+
+/* .withSidebar:not(.sidebarCollapsed) .mainContent {
+  margin-left: 250px;
+}
+
+.withSidebar.sidebarCollapsed .mainContent {
+  margin-left: 55px;
+} */

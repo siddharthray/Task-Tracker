@@ -1,0 +1,31 @@
+/* All rows share full width */
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: first baseline;
+  gap: 1rem;
+}
+
+/* Third row: two columns side by side */
+.thirdRow {
+  display: flex;
+}
+
+.openTasks {
+  background: #ebe8e8;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.completedTasks {
+  background: #98eec7;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Each column in the third row takes equal space */
+.column {
+  flex: 1;
+}

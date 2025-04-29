@@ -1,0 +1,95 @@
+.detailsWrapper {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.childrenContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.childrenContainer button {
+  padding: 0.5rem 1rem;
+  background-color: #4c6ae4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.childrenContainer button:hover {
+  background-color: #3651be;
+}
+
+.childrenContainer p {
+  margin: 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.taskInfo {
+  margin-bottom: 1.5rem;
+}
+.taskInfo p {
+  margin: 0.4rem 0;
+  line-height: 1.4;
+}
+
+.saveBtn {
+  padding: 0.6rem 1.2rem;
+  background-color: #3cb5b7;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.saveBtn:hover {
+  background-color: #2ea0a2;
+}
+
+.disabled {
+  background-color: #ccc !important;
+  cursor: not-allowed;
+  padding: 0.6rem 1.2rem;
+  background-color: #3cb5b7;
+  border: none;
+  border-radius: 4px;
+}
+
+.EditBtn {
+  padding: 0.6rem 1.2rem;
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.EditBtn:hover {
+  background-color: #e08e0b;
+}
+
+.btnActions {
+  display: flex;
+  gap: 1rem;
+}
+
+.taskInfoHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.taskInfoHeader p {
+  font-size: 0.8rem;
+}

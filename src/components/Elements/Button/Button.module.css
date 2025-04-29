@@ -1,0 +1,112 @@
+/* Button.module.css */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Variants */
+.primary {
+  background-color: #4f86ed;
+  color: white;
+}
+
+.primary:hover {
+  background-color: #3a71d8;
+}
+
+.primary:active {
+  background-color: #2a61c8;
+}
+
+.secondary {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.secondary:hover {
+  background-color: #e0e0e0;
+}
+
+.secondary:active {
+  background-color: #d0d0d0;
+}
+
+.danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.danger:hover {
+  background-color: #c82333;
+}
+
+.danger:active {
+  background-color: #bd2130;
+}
+
+.success {
+  background-color: #28a745;
+  color: white;
+}
+
+.success:hover {
+  background-color: #218838;
+}
+
+.success:active {
+  background-color: #1e7e34;
+}
+
+/* Sizes */
+.small {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.medium {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.large {
+  padding: 12px 24px;
+  font-size: 16px;
+}
+
+/* Width */
+.fullWidth {
+  width: 100%;
+}
+
+/* Disabled state */
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Focus state for accessibility */
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(79, 134, 237, 0.25);
+}
+
+/* Focus visible only when using keyboard */
+.btn:focus:not(:focus-visible) {
+  box-shadow: none;
+}
+
+.btn:focus-visible {
+  box-shadow: 0 0 0 3px rgba(79, 134, 237, 0.25);
+}

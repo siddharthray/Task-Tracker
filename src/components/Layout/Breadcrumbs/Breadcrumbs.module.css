@@ -1,0 +1,39 @@
+.breadcrumbs {
+  padding: 0.75rem 0;
+  margin-bottom: 1rem;
+  background-color: transparent;
+}
+
+.breadcrumbsList {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.breadcrumbsItem {
+  display: flex;
+  align-items: center;
+  color: #6c757d;
+  font-size: 0.875rem;
+}
+
+.breadcrumbsItem a {
+  color: #4f86ed;
+  text-decoration: none;
+}
+
+.breadcrumbsItem a:hover {
+  text-decoration: underline;
+}
+
+.separator {
+  display: inline-block;
+  padding: 0 0.5rem;
+  color: #6c757d;
+}
+
+.active {
+  color: #495057;
+}

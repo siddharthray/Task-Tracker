@@ -1,0 +1,72 @@
+/* components/Layout/Section/Section.module.css */
+.section {
+  position: relative;
+  width: 100%;
+}
+
+.withDivider {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.sectionHeader {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.sectionTitle {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.sectionSubtitle {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: #6c757d;
+}
+
+.sectionContent {
+  width: 100%;
+}
+
+/* Padding variations */
+.padding-none {
+  padding: 0;
+}
+
+.padding-small {
+  padding: 1.5rem 0;
+}
+
+.padding-normal {
+  padding: 3rem 0;
+}
+
+.padding-large {
+  padding: 6rem 0;
+}
+
+/* Background variations */
+.bg-transparent {
+  background-color: transparent;
+}
+
+.bg-light {
+  background-color: #f8f9fa;
+}
+
+.bg-dark {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.bg-primary {
+  background-color: #4f86ed;
+  color: #fff;
+}
+
+.bg-dark .sectionSubtitle,
+.bg-primary .sectionSubtitle {
+  color: rgba(255, 255, 255, 0.8);
+}
