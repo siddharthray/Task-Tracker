@@ -1,0 +1,31 @@
+.todo-form-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-input,
+.add-task-button {
+  font-size: 1rem; /* make sure your text size is identical */
+  line-height: 1.5; /* roughly 1.5rem tall lines */
+  padding: 0.5rem 1rem; /* vertical 0.5rem + horizontal 1rem */
+  height: 2.5rem; /* locks them both to the same height */
+  box-sizing: border-box; /* so padding + border stay inside 2.5rem */
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* optional: differentiate visuals */
+.todo-input {
+  border-right: none; /* if you put them side-by-side */
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  width: 40%;
+}
+.add-task-button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  cursor: pointer;
+  background: #e8ebeb;
+}

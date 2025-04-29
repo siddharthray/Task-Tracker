@@ -1,0 +1,100 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  height: 55px;
+  padding: 0 20px;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  padding: 0.8rem;
+}
+
+.navbarLink {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+.navbarLink a {
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  color: white;
+}
+.activeLink {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #f0f0f0;
+  background-color: #333;
+  /* padding: 0.5rem 1rem; */
+  border-radius: 4px;
+}
+.navbarLink a:hover {
+  color: #f0f0f0;
+  background-color: #505050;
+  border-radius: 4px;
+  font-size: 1rem;
+  /* padding: 0.5rem 1rem; */
+}
+
+ul.navbarLink {
+  padding: 0 0.8rem;
+}
+
+.navbarStart {
+  display: flex;
+  align-items: center;
+}
+
+.menuButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  position: relative;
+}
+
+.hamburger:before,
+.hamburger:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  left: 0;
+}
+
+.hamburger:before {
+  top: -6px;
+}
+
+.hamburger:after {
+  bottom: -6px;
+}
+
+@media (min-width: 768px) {
+  .menuButton {
+    display: none;
+  }
+}

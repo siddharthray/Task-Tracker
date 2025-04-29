@@ -1,0 +1,102 @@
+.divider {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.horizontal {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 16px 0;
+  clear: both;
+}
+
+.vertical {
+  display: inline-block;
+  height: 100%;
+  margin: 0 8px;
+  border-top: 0;
+  border-left: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.horizontal:before,
+.horizontal:after {
+  content: "";
+  flex: 1;
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+
+.dividerText {
+  padding: 0 16px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Type variations */
+.type-solid:before,
+.type-solid:after {
+  border-top-style: solid;
+}
+
+.type-dashed:before,
+.type-dashed:after {
+  border-top-style: dashed;
+}
+
+.type-dotted:before,
+.type-dotted:after {
+  border-top-style: dotted;
+}
+
+.vertical.type-dashed {
+  border-left-style: dashed;
+}
+
+.vertical.type-dotted {
+  border-left-style: dotted;
+}
+
+/* Spacing variations */
+.spacing-small {
+  margin: 8px 0;
+}
+
+.spacing-medium {
+  margin: 16px 0;
+}
+
+.spacing-large {
+  margin: 32px 0;
+}
+
+.vertical.spacing-small {
+  margin: 0 4px;
+}
+
+.vertical.spacing-medium {
+  margin: 0 8px;
+}
+
+.vertical.spacing-large {
+  margin: 0 16px;
+}
+
+/* Color variations */
+.color-default:before,
+.color-default:after,
+.vertical.color-default {
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+.color-light:before,
+.color-light:after,
+.vertical.color-light {
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+.color-dark:before,
+.color-dark:after,
+.vertical.color-dark {
+  border-color: rgba(0, 0, 0, 0.22);
+}

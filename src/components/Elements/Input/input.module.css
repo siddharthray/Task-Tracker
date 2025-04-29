@@ -1,0 +1,86 @@
+/* Base container */
+.input-wrapper {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+/* Label styling */
+.input-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Basic input styling */
+.input {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #4f86ed;
+  box-shadow: 0 0 0 3px rgba(79, 134, 237, 0.25);
+}
+
+.input::placeholder {
+  color: #999;
+}
+
+.input:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Checkbox and radio specific styling */
+input[type="checkbox"].input,
+input[type="radio"].input {
+  width: auto;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+/* Error state */
+.input-error {
+  border-color: #dc3545;
+}
+
+.input-error:focus {
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.25);
+}
+
+.input-error-message {
+  color: #dc3545;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* Helper text */
+.input-helper-text {
+  color: #6c757d;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* For input groups with label and control on same line */
+.input-horizontal {
+  display: flex;
+  align-items: center;
+}
+
+.input-horizontal .input-label {
+  margin-bottom: 0;
+  margin-right: 12px;
+  min-width: 120px;
+}

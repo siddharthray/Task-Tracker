@@ -1,0 +1,40 @@
+.main-content {
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 200px;
+  background: #f5f4f2;
+  padding-top: 55px !important;
+}
+
+.fullWidth {
+  max-width: 100%;
+}
+
+/* Padding variations */
+.padding-none {
+  padding: 0;
+}
+
+.padding-small {
+  padding: 1rem;
+}
+
+.padding-normal {
+  padding: 1.5rem;
+}
+
+.padding-large {
+  padding: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .padding-normal {
+    padding: 1rem;
+  }
+
+  .padding-large {
+    padding: 1.5rem;
+  }
+}
