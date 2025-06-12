@@ -1,16 +1,11 @@
 // pages/OpenTasksPage.tsx
-import React from "react";
 import TodoList from "../../features/todo/todoList";
 import openTasksList from "./OpenTasksPage.module.css";
+import { useTasks } from "../../hooks/useTasks";
 
-export default function OpenTasksPage({
-  openTasks,
-  onDelete,
-  onToggle,
-  onEdit,
-  title,
-}) {
+export default function OpenTasksPage({ title = "Open Tasks" }) {
   // const openTasks = tasks.filter((t) => !t?.completed);
+  const { openTasks, removeTask, toggleTask, saveEdit } = useTasks();
 
   return (
     <div
@@ -19,9 +14,9 @@ export default function OpenTasksPage({
       <h2 className={openTasksList.title}>{title}</h2>
       <TodoList
         items={openTasks}
-        onDelete={onDelete}
-        onToggle={onToggle}
-        onEdit={onEdit}
+        onDelete={removeTask}
+        onToggle={toggleTask}
+        onEdit={saveEdit}
       />
     </div>
   );

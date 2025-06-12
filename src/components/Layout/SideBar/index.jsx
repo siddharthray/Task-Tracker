@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router";
 import styles from "./Sidebar.module.css";
 
-export default function Sidebar({ onClose }) {
+export default function Sidebar() {
   return (
     <div className={styles.sidebarInner}>
       {/* <div className={styles.sidebarHeader}>
@@ -16,18 +16,8 @@ export default function Sidebar({ onClose }) {
           <ul className={styles.sidebarNav}>
             <li>
               <NavLink
-                to="/dashboard"
-                className={({ isActive }) =>
-                  isActive ? styles.activeLink : ""
-                }
-              >
-                <span className={styles.icon}>📊</span>
-                <span className={styles.label}>Dashboard</span>
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
                 to="/tasks"
+                end
                 className={({ isActive }) =>
                   isActive ? styles.activeLink : ""
                 }
@@ -38,7 +28,7 @@ export default function Sidebar({ onClose }) {
             </li>
             <li>
               <NavLink
-                to="/openTasks"
+                to="/tasks/openTasks"
                 className={({ isActive }) =>
                   isActive ? styles.activeLink : ""
                 }
@@ -49,7 +39,7 @@ export default function Sidebar({ onClose }) {
             </li>
             <li>
               <NavLink
-                to="/completedTasks"
+                to="/tasks/completedTasks"
                 className={({ isActive }) =>
                   isActive ? styles.activeLink : ""
                 }

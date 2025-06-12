@@ -62,80 +62,19 @@ export default function TodoApp() {
   }, []);
 
   return (
-    <Routes>
-      {/* Redirect root → /tasks */}
-      <Route path="/" element={<Navigate to="/tasks" replace />} />
-      {/* List view */}
-      <Route
-        path="tasks"
-        element={
-          <Tasks
-            onAddTask={handleAddTask}
-            editingTask={editingTask}
-            onSaveEdit={handleSaveEdit}
-            openTasks={openTasks}
-            doneTasks={doneTasks}
-            onDelete={handleDelete}
-            onToggle={handleToggle}
-            onEdit={handleEditStart}
-            title="Task Tracker"
-            description="Keep track of your tasks: add new ones, mark them done, or reopen."
-          />
-        }
+    <>
+      <Tasks
+        onAddTask={handleAddTask}
+        editingTask={editingTask}
+        openTasks={openTasks}
+        doneTasks={doneTasks}
+        onDelete={handleDelete}
+        onToggle={handleToggle}
+        onSaveEdit={handleSaveEdit}
+        onEdit={handleEditStart}
+        title="Task Tracker"
+        description="Keep track of your tasks: add new ones, mark them done, or reopen."
       />
-      <Route
-        path="/task/:id"
-        element={<TaskDetailsPage allTasks={tasks} onSave={handleSaveEdit} />}
-      />
-
-      {/* Detail view with nested edit form */}
-      {/* <Route
-          path="tasks/:id"
-          element={
-            <TaskDetailPage
-              task={tasks}
-              onDelete={handleDelete}
-              onToggle={handleToggle}
-              onEdit={handleEditStart}
-            />
-          }
-        > */}
-      {/* nested route for editing */}
-      {/* <Route
-            path="edit"
-            element={
-              <TaskEditForm
-                editingTask={editingTask}
-                onAddTask={handleAddTask}
-                onSaveEdit={handleSaveEdit}
-              />
-            }
-          />
-        </Route> */}
-
-      {/* Fallback */}
-      <Route
-        path="/openTasks"
-        element={
-          <OpenTasksPage
-            openTasks={openTasks}
-            onDelete={handleDelete}
-            onToggle={handleToggle}
-            onEdit={handleEditStart}
-          />
-        }
-      />
-      <Route
-        path="/completedTasks"
-        element={
-          <CompletedTasksPage
-            doneTasks={doneTasks}
-            onDelete={handleDelete}
-            onToggle={handleToggle}
-          />
-        }
-      />
-      <Route path="*" element={<h2>404: Not Found</h2>} />
-    </Routes>
+    </>
   );
 }
