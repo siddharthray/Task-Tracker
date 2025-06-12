@@ -1,5 +1,4 @@
 // src/services/taskService.js
-//this is being repead code, fix it
 const tasks = localStorage.getItem("tasks")
   ? JSON.parse(localStorage.getItem("tasks"))
   : [];
